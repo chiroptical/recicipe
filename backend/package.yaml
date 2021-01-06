@@ -1,0 +1,48 @@
+library:
+  source-dirs: src
+tests:
+  backend-test:
+    source-dirs: test
+    main: Spec.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - backend
+    - hspec
+    - hspec-megaparsec
+copyright: 2020 Barry Moore
+maintainer: chiroptical@gmail.com
+dependencies:
+- base >= 4.7 && < 5
+- megaparsec
+- parser-combinators
+- units
+- text
+- beam-core
+- beam-postgres
+- postgresql-simple
+- servant
+- servant-server
+- transformers
+- aeson
+name: backend
+version: 0.1.0.0
+extra-source-files:
+- README.md
+- CHANGELOG.md
+author: Barry Moore
+github: chiroptical/recicipe
+license: BSD3
+executables:
+  backend-exe:
+    source-dirs: app
+    main: Main.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - backend
+description: Please see the README on GitHub at <https://github.com/chiroptical/recicipe#readme>
