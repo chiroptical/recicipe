@@ -12,13 +12,16 @@ Software
 ---
 
 - Haskell Backend
-- Elm Frontend
+  - Trasa or Servant
+  - Beam or Persistent (w/ postgresql)
+- Elm or Purescript Frontend
 
 Limitations
 ---
 
-- One picture
-- No descriptions
+- title length
+- one picture
+- no descriptions
 
 Steps
 ---
@@ -39,12 +42,14 @@ Mix [1 egg] and [1 cup cheese]
 2. Build a backend which:
   - saves recipes
   - user logins:
-    - https://hackage.haskell.org/package/password
-    - https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
-    - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf
-    - https://gitlab.com/gilmi/my-scotty-users
-    - https://crackstation.net/hashing-security.htm
-    - https://nitratine.net/blog/post/how-to-hash-passwords-in-python
+    - Use https://www.keycloak.org service (deployable on NixOS)
+    - potentially need these
+      - https://hackage.haskell.org/package/password
+      - https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+      - https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf
+      - https://gitlab.com/gilmi/my-scotty-users
+      - https://crackstation.net/hashing-security.htm
+      - https://nitratine.net/blog/post/how-to-hash-passwords-in-python
 
 3. Build a frontend:
   - form to input recipes
