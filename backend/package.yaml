@@ -18,15 +18,7 @@ dependencies:
 - base >= 4.7 && < 5
 - megaparsec
 - parser-combinators
-- units
 - text
-- beam-core
-- beam-postgres
-- postgresql-simple
-- servant
-- servant-server
-- transformers
-- aeson
 name: backend
 version: 0.1.0.0
 extra-source-files:

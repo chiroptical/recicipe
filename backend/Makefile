@@ -1,6 +1,6 @@
 build:
 	hpack .
-	cabal build
+	cabal -j4 build
 
 test:
 	hpack .
