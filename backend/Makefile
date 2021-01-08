@@ -14,10 +14,22 @@ ghcid-test:
 	hpack .
 	ghcid -c 'cabal repl backend:tests'
 
+ghcid-with-tests:
+	hpack .
+	ghcid -c 'cabal repl backend:tests' --test 'Main.main'
+
 format:
 	find test/ src/ app/ -name "*.hs" -exec ormolu -i {} \;
 
 hoogle:
 	hoogle server
 
-.PHONY: build test ghcid ghcid-test format hoogle
+repl:
+	hpack .
+	cabal repl
+
+repl-test:
+	hpack .
+	cabal repl backend:tests
+
+.PHONY: build test ghcid ghcid-test format hoogle repl repl-test ghcid-with-tests

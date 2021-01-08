@@ -1,5 +1,12 @@
 TODO
+---
 
-- Let nix handle haskell packages (example: https://github.com/countoren/coding-challanges/blob/main/shell.nix)
-- Add more tests for parser
-- An `Entry` is made up of a "measurement", "unit" and an "ingredient", parse them
+- Build a unit system to represent things like grams, ounces, numbers of things
+- Continue working on ingredient parser
+- Add comments to code
+  - Learn more Haddock
+
+Future us problems
+---
+
+- Human readable errors for mistakes
