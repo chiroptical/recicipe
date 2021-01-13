@@ -6,6 +6,7 @@ let
     hspec-megaparsec
     megaparsec
     parser-combinators
+    units
   ]);
 
   ghc = pkgs.haskell.packages.ghc884.ghcWithHoogle haskellPackages;
