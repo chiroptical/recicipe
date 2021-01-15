@@ -4,11 +4,14 @@ TODO
 - [ ] Build a unit system to represent things like grams, ounces, numbers of things
   - [x] Figure out the units library
   - [ ] Document current units
-  - [ ] Add enough units to parse all of our test cases
-  - [ ] Build parser for unit system
-- Continue working on ingredient parser
-- Add comments to code
-  - Learn more Haddock
+  - [ ] Add tests for parseMass
+  - [ ] Test and implement parseLiquidVolume
+  - [ ] Test and implement parseDryVolume
+  - [ ] Test and implement parseNumber
+- [ ] Organize Parsing code
+- [ ] Continue working on ingredient parser
+- [ ] Add comments to code
+  - [ ] Learn more Haddock
 
 Future us problems
 ---
