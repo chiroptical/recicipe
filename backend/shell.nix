@@ -19,5 +19,6 @@ in
       pkgs.cabal2nix
       pkgs.ghcid
       pkgs.haskellPackages.hpack
+      pkgs.hlint
     ];
   }

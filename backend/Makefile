@@ -32,4 +32,8 @@ repl-test:
 	hpack .
 	cabal repl backend:tests
 
-.PHONY: build test ghcid ghcid-test format hoogle repl repl-test ghcid-with-tests
+hlint:
+	hpack .
+	hlint .
+
+.PHONY: build test ghcid ghcid-test format hoogle repl repl-test ghcid-with-tests hlint

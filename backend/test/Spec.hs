@@ -1,11 +1,13 @@
 {-# LANGUAGE OverloadedStrings #-}
 
+import qualified Data.Metrology.Poly as M
 import Data.Ratio ((%))
 import Data.Text (Text)
 import Parser
 import Test.Hspec
 import Test.Hspec.Megaparsec
 import Text.Megaparsec
+import Unit
 
 ingredientsLengthShouldBe :: Text -> Int -> Expectation
 ingredientsLengthShouldBe text len =
@@ -16,6 +18,11 @@ ingredientShouldBe text = parseSatisfies (parse parseIngredient "" text) . (==)
 
 main :: IO ()
 main = hspec $ do
+  describe "parses a or an" $ do
+    it "can parse a" $
+      parse parseAAn "" "a" `parseSatisfies` (== 1)
+    it "can't parse b" $
+      parse parseAAn "" `shouldFailOn` "b"
   describe "parses rational numbers" $ do
     it "can parse 1/2" $
       parseSatisfies (parse parseRational "" "1 / 2") (== 1 % 2)
@@ -41,6 +48,13 @@ main = hspec $ do
       "12 eggs" `ingredientShouldBe` Ingredient (12 % 1) "" "eggs"
     it "will parse" $
       "175g package of sponge fingers" `ingredientShouldBe` Ingredient (175 % 1) "g" "package of sponge fingers"
+  describe "parsing units" $ do
+    it "will parse mass" $
+      ((M.# Ounce) <$> parse parseMass "" "12 ounce") `parseSatisfies` (== 12)
+    it "will parse mass" $
+      ((M.# Ounce) <$> parse parseMass "" "2.0 ounce") `parseSatisfies` (== 2 % 1)
+    it "will parse mass" $
+      ((M.# Ounce) <$> parse parseMass "" "1/2 ounce") `parseSatisfies` (== 1 % 2)
 
 caseZero :: Text
 caseZero = "Put [1/2 quart double cream], [8.8 oz mascarpone], [75 ml marsala] and [5 tbsp golden caster sugar] in a large bowl."
