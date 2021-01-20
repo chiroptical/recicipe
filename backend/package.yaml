@@ -39,3 +39,5 @@ executables:
     dependencies:
     - backend
 description: Please see the README on GitHub at <https://github.com/chiroptical/recicipe#readme>
+default-extensions:
+  OverloadedStrings

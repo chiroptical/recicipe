@@ -4,12 +4,15 @@ TODO
 - [ ] Build a unit system to represent things like grams, ounces, numbers of things
   - [x] Figure out the units library
   - [ ] Document current units
-  - [ ] Add tests for parseMass
-  - [ ] Test and implement parseLiquidVolume
-  - [ ] Test and implement parseDryVolume
-  - [ ] Test and implement parseNumber
-- [ ] Organize Parsing code
-- [ ] Continue working on ingredient parser
+  - [x] Add tests for parseMass
+  - [x] Test and implement parseLiquidVolume
+  - [x] Test and implement parseDryVolume
+  - [x] Test and implement parseNumber
+- [ ] Organize parsing code
+- [ ] Ingredients parser (convert plural to singular for all words)
+  - [ ] Figure out https://hackage.haskell.org/package/countable-inflections
+- [ ] Need a search engine for tags (i.e. ingredients in the database)
+  - [ ] Maybe https://hackage.haskell.org/package/full-text-search
 - [ ] Add comments to code
   - [ ] Learn more Haddock
 
