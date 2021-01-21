@@ -12,6 +12,7 @@ TODO
 - [ ] Ingredients parser (convert plural to singular for all words)
   - [ ] Figure out https://hackage.haskell.org/package/countable-inflections
 - [ ] Need a search engine for tags (i.e. ingredients in the database)
+  - [ ] Maybe https://hackage.haskell.org/package/sphinx
   - [ ] Maybe https://hackage.haskell.org/package/full-text-search
 - [ ] Add comments to code
   - [ ] Learn more Haddock
