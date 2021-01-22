@@ -13,8 +13,10 @@ Software
 
 - Haskell Backend
   - Trasa or Servant
-  - Beam or Persistent (w/ postgresql)
+  - Beam, Persistent, or Opaleye (w/ postgresql)
 - Elm or Purescript Frontend
+- Elasticsearch used for ingredient/recipe search
+  - used by frontend to power search
 
 Limitations
 ---
