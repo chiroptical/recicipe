@@ -21,6 +21,13 @@ dependencies:
 - text
 - units
 - countable-inflections
+- servant
+- servant-server
+- warp
+- opaleye
+- postgresql-simple
+- product-profunctors
+- uuid
 name: backend
 version: 0.1.0.0
 extra-source-files:

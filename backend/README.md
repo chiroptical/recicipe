@@ -18,3 +18,12 @@ Future us problems
 ---
 
 - When the parser fails, we would like a human readable error
+
+Installation Notes
+---
+
+```
+createdb recicipe
+pgcli recicipe
+> CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+```

@@ -7,6 +7,13 @@ let
     megaparsec
     parser-combinators
     units
+    servant
+    servant-server
+    warp
+    opaleye
+    postgresql-simple
+    product-profunctors
+    uuid
   ]);
 
   ghc = pkgs.haskell.packages.ghc884.ghcWithHoogle haskellPackages;
@@ -20,5 +27,6 @@ in
       pkgs.ghcid
       pkgs.haskellPackages.hpack
       pkgs.hlint
+      pkgs.pgcli
     ];
   }
