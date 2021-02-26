@@ -10,3 +10,5 @@
 /.spago
 /.cache/
 /dist/
+/generated/
+/assets/index.js

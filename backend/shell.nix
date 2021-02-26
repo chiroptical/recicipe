@@ -14,6 +14,10 @@ let
     postgresql-simple
     product-profunctors
     uuid
+    aeson
+    purescript-bridge
+    servant-options
+    wai-cors
   ]);
 
   ghc = pkgs.haskell.packages.ghc884.ghcWithHoogle haskellPackages;

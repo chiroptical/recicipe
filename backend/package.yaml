@@ -28,6 +28,10 @@ dependencies:
 - postgresql-simple
 - product-profunctors
 - uuid
+- aeson
+- purescript-bridge
+- servant-options
+- wai-cors
 name: backend
 version: 0.1.0.0
 extra-source-files:

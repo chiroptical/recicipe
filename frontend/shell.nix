@@ -5,5 +5,7 @@ pkgs.mkShell {
     pkgs.spago
     pkgs.nodePackages.parcel-bundler
     pkgs.nodePackages.http-server
+    pkgs.nodePackages.npm
+    pkgs.nodePackages.purty
   ];
 }
